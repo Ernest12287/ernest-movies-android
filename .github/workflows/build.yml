@@ -2,9 +2,9 @@ name: Build APK
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
   workflow_dispatch:
 
 jobs:
@@ -12,22 +12,21 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: 📦 Checkout Code
-      uses: actions/checkout@v4
-      
-    - name: 🛠️ Setup Gradle, JDK 20 & Caching
-      # This action handles JDK setup (using Java 20), sets up Gradle caching, 
-      # and ensures the Gradle wrapper (gradlew) is correctly configured and executable.
-      uses: gradle/actions/setup-gradle@v3
-      with:
-        java-version: '20'
-        distribution: 'temurin'
+    - uses: actions/checkout@v3
     
-    - name: ⚙️ Build with Gradle
-      # NOTE: This step requires the 'gradlew' file to be committed to the root of your repository.
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'temurin'
+        
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      
+    - name: Build with Gradle
       run: ./gradlew assembleRelease
       
-    - name: 🔑 Sign APK
+    - name: Sign APK
       uses: r0adkll/sign-android-release@v1
       with:
         releaseDirectory: app/build/outputs/apk/release
@@ -38,14 +37,14 @@ jobs:
       env:
         BUILD_TOOLS_VERSION: "34.0.0"
         
-    - name: ⬆️ Upload APK Artifact
-      uses: actions/upload-artifact@v4
+    - name: Upload APK
+      uses: actions/upload-artifact@v3
       with:
         name: ernest-movies-apk
         path: app/build/outputs/apk/release/*.apk
         
-    - name: 🏷️ Create GitHub Release
-      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    - name: Create Release
+      if: github.ref == 'refs/heads/main'
       uses: softprops/action-gh-release@v1
       with:
         tag_name: v${{ github.run_number }}
