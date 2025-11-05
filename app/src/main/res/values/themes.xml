@@ -2,7 +2,7 @@
 <!-- FILE: themes.xml -->
 <!-- LOCATION: Ernest-Movies-app/app/src/main/res/values/themes.xml -->
 <!-- ============================================ -->
-<?xml version="1.0" encoding="utf-8"?>
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
 <resources>
     <style name="Base.Theme.ErnestMovies" parent="Theme.Material3.Dark.NoActionBar">
         <item name="colorPrimary">@color/accent_yellow</item>
