@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!-- ============================================ -->
 <!-- FILE: strings.xml -->
 <!-- LOCATION: Ernest-Movies-app/app/src/main/res/values/strings.xml -->
 <!-- ============================================ -->
-<!-- <?xml version="1.0" encoding="utf-8"?> -->
+
 <resources>
     <string name="app_name">Ernest Movies</string>
     <string name="tagline">Your Premium Streaming Experience</string>
