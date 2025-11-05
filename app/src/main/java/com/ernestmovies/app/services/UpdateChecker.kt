@@ -20,7 +20,7 @@ import java.net.URL
 class UpdateChecker(private val context: Context) {
     
     companion object {
-        private const val GITHUB_API_URL = "https://api.github.com/repos/YOUR_USERNAME/ernest-movies-android/releases/latest"
+        private const val GITHUB_API_URL = "https://api.github.com/repos/Ernest12287/ernest-movies-android/releases/latest"
         private const val PREFS_NAME = "ernest_movies_prefs"
         private const val LAST_UPDATE_CHECK = "last_update_check"
     }
