@@ -1,7 +1,3 @@
-// ============================================
-// FILE: proguard-rules.pro
-// LOCATION: Ernest-Movies-app/app/proguard-rules.pro
-// ============================================
 # Ernest Movies ProGuard Rules
 
 # Keep Parcelable classes
