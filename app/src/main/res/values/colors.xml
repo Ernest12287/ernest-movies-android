@@ -1,0 +1,22 @@
+<!-- FILE: colors.xml -->
+<!-- LOCATION: Ernest-Movies-app/app/src/main/res/values/colors.xml -->
+<!-- ============================================ -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <color name="background_primary">#121212</color>
+    <color name="background_dark">#1E1E1E</color>
+    <color name="background_light">#2C2C2C</color>
+    <color name="background_maroon">#8B0000</color>
+    
+    <color name="text_light">#F0F0F0</color>
+    <color name="text_dark">#333333</color>
+    
+    <color name="accent_yellow">#FFD700</color>
+    <color name="accent_skyblue">#87CEEB</color>
+    
+    <color name="button_primary">#4A4A4A</color>
+    <color name="button_hover">#5A5A5A</color>
+</resources>

@@ -1,0 +1,13 @@
+<!-- ============================================ -->
+<!-- FILE: splash_background.xml -->
+<!-- LOCATION: Ernest-Movies-app/app/src/main/res/drawable/splash_background.xml -->
+<!-- ============================================ -->
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:type="linear"
+        android:startColor="@color/background_maroon"
+        android:centerColor="@color/background_dark"
+        android:endColor="@color/background_maroon"
+        android:angle="135" />
+</shape>

@@ -1,0 +1,22 @@
+<!-- ============================================ -->
+<!-- FILE: ic_launcher_foreground.xml -->
+<!-- LOCATION: Ernest-Movies-app/app/src/main/res/drawable/ic_launcher_foreground.xml -->
+<!-- ============================================ -->
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <group android:scaleX="0.5"
+        android:scaleY="0.5"
+        android:translateX="27"
+        android:translateY="27">
+        <path
+            android:fillColor="@color/accent_yellow"
+            android:pathData="M54,27C37.9,27 25,39.9 25,56s12.9,29 29,29s29,-12.9 29,-29S70.1,27 54,27zM67.5,75H40.5V37h27V75z"/>
+        <path
+            android:fillColor="@color/background_maroon"
+            android:pathData="M40.5,37h27v38h-27z"/>
+    </group>
+</vector>

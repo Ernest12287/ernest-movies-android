@@ -1,0 +1,27 @@
+<!-- ============================================ -->
+<!-- FILE: themes.xml -->
+<!-- LOCATION: Ernest-Movies-app/app/src/main/res/values/themes.xml -->
+<!-- ============================================ -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Base.Theme.ErnestMovies" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/accent_yellow</item>
+        <item name="colorPrimaryVariant">@color/background_maroon</item>
+        <item name="colorOnPrimary">@color/background_primary</item>
+        <item name="colorSecondary">@color/accent_skyblue</item>
+        <item name="colorOnSecondary">@color/background_primary</item>
+        <item name="android:colorBackground">@color/background_primary</item>
+        <item name="colorSurface">@color/background_dark</item>
+        <item name="colorOnSurface">@color/text_light</item>
+        <item name="android:statusBarColor">@color/background_primary</item>
+        <item name="android:navigationBarColor">@color/background_primary</item>
+    </style>
+
+    <style name="Theme.ErnestMovies" parent="Base.Theme.ErnestMovies" />
+    
+    <style name="Theme.ErnestMovies.Splash" parent="Theme.ErnestMovies">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+</resources>

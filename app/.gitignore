@@ -1,0 +1,5 @@
+// ============================================
+// FILE: .gitignore
+// LOCATION: Ernest-Movies-app/app/.gitignore
+// ============================================
+/build

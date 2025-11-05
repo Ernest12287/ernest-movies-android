@@ -1,0 +1,23 @@
+// ============================================
+// FILE: settings.gradle
+// LOCATION: Ernest-Movies-app/settings.gradle
+// ============================================
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+rootProject.name = "Ernest Movies"
+include ':app'
