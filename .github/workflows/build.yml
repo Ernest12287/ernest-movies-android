@@ -1,5 +1,4 @@
 name: Build APK
-
 on:
   push:
     branches: [ main ]
@@ -38,18 +37,22 @@ jobs:
           keyPassword: ${{ secrets.KEY_PASSWORD }}
         env:
           BUILD_TOOLS_VERSION: "34.0.0"
+      
+      - name: Rename signed APK
+        run: |
+          mv app/build/outputs/apk/release/app-release-unsigned-signed.apk app/build/outputs/apk/release/ernest-movies-v${{ github.run_number }}.apk
           
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: ernest-movies-apk
-          path: app/build/outputs/apk/release/*.apk
+          path: app/build/outputs/apk/release/ernest-movies-v${{ github.run_number }}.apk
           
       - name: Create Release
         if: github.ref == 'refs/heads/main'
         uses: softprops/action-gh-release@v1
         with:
           tag_name: v${{ github.run_number }}
-          files: app/build/outputs/apk/release/*.apk
+          files: app/build/outputs/apk/release/ernest-movies-v${{ github.run_number }}.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

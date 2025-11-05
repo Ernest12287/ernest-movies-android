@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <item
+        android:id="@+id/menu_refresh"
+        android:title="@string/menu_refresh_title"
+        android:icon="@android:drawable/ic_menu_rotate"
+        app:showAsAction="ifRoom" />
+    
+    <item
+        android:id="@+id/menu_telegram"
+        android:title="@string/menu_telegram_title"
+        android:icon="@android:drawable/ic_dialog_email" />
+    
+    <item
+        android:id="@+id/menu_whatsapp"
+        android:title="@string/menu_whatsapp_title" />
+    
+    <item
+        android:id="@+id/menu_email"
+        android:title="@string/menu_email_title" />
+    
+    <item
+        android:id="@+id/menu_call"
+        android:title="@string/menu_call_title" />
+</menu>
